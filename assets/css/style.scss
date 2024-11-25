@@ -2,9 +2,6 @@
 ---
 
 @import "{{ site.theme }}";
-@import "rouge-base16-light";
-@import "default_colors";
-
 $body-background: $white-smoke !default; /* Light background */
 $body-foreground: $cod-grey !default; /* Dark text for readability */
 $header: $midnight-blue !default; /* Darker accent for header */
