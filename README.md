@@ -1,11 +1,4 @@
-Welcome to the **Knowledge Hub**! This page contains a categorized collection of resources on various topics like Golang, Networking, Linux, and more. Click the links below to explore.
-
 # Projects
-## Projects
-### Projects
-#### Projects
-#### Projects
-
 ---
 
 ## 📘 Golang
