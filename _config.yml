@@ -4,5 +4,5 @@ plugins:
 
 title: [Vikas Badoni]
 
-show_downloads: [false]
+show_downloads: ["false"]
 
