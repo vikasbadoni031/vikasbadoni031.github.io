@@ -1,6 +1,3 @@
-# Projects
----
-
 ## 📘 Golang
 
 1. [Getting Started with Go](https://go.dev/doc/tutorial/getting-started)  
