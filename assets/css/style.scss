@@ -2,120 +2,91 @@
 ---
 
 @import "{{ site.theme }}";
-/* General Reset */
+@import "rouge-base16-light";
+@import "default_colors";
+
+$body-background: $white-smoke !default; /* Light background */
+$body-foreground: $cod-grey !default; /* Dark text for readability */
+$header: $midnight-blue !default; /* Darker accent for header */
+$blockquote-color: $dim-gray !default;
+$blockquote-border: $light-gray !default;
+$container-max-width: 1000px;
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+  margin: 0;
+  padding: 0;
+  background: $body-background url("../images/bkg-light.png") 0 0;
+  color: $body-foreground;
+  font-size: 16px;
+  line-height: 1.5;
+  font-family: Monaco, "Bitstream Vera Sans Mono", "Lucida Console", Terminal, monospace;
 }
 
-/* Main Container */
+/* General & 'Reset' Stuff */
+
 .container {
-    width: 80%;
-    max-width: 800px;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
+  width: 90%;
+  max-width: $container-max-width;
+  margin: 0 auto;
 }
 
-/* Headings */
-h1, h2, h3 {
-    color: #444;
-    margin-bottom: 10px;
+header {
+  background: rgba(255, 255, 255, 0.9); /* Lighter background for the header */
+  border-bottom: 1px solid $midnight-blue;
+  padding: 20px 0;
+  margin-bottom: 40px;
 }
 
-h1 {
-    font-size: 2rem;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
+header h1 {
+  color: $midnight-blue;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1),
+               0 0 5px rgba(63, 81, 181, 0.2); /* Subtle glow */
 }
 
-h2 {
-    font-size: 1.6rem;
-    margin-top: 20px;
+header h2 {
+  color: $dim-gray;
 }
 
-h3 {
-    font-size: 1.3rem;
+blockquote {
+  color: $blockquote-color;
+  padding-left: 10px;
+  border-left: 3px solid $blockquote-border; /* Softer border */
 }
 
-/* Paragraphs */
-p {
-    margin: 10px 0;
+pre {
+  background: $white-smoke;
+  border: 1px solid $light-gray;
+  color: $midnight-blue;
+}
+
+code.highlighter-rouge {
+  background: $light-gray;
+  color: $midnight-blue;
+}
+
+/* Buttons */
+.btn {
+  background: -webkit-linear-gradient(top, $alice-blue, $light-steel-blue);
+  border: 2px solid $midnight-blue;
+  color: $midnight-blue;
+  text-shadow: none;
+}
+
+.btn:hover {
+  background: $light-steel-blue;
 }
 
 /* Links */
 a {
-    color: #007bff;
-    text-decoration: none;
+  color: $midnight-blue;
+  text-shadow: none;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Tables */
+th {
+  border-bottom: 1px solid $light-gray;
 }
 
-/* Images */
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 10px 0;
-    border-radius: 5px;
-}
-
-/* Blockquote */
-blockquote {
-    margin: 20px 0;
-    padding: 10px 20px;
-    background-color: #f0f0f0;
-    border-left: 5px solid #007bff;
-    font-style: italic;
-    color: #555;
-}
-
-/* Code Blocks */
-code, pre {
-    font-family: 'Courier New', monospace;
-    background: #f4f4f4;
-    padding: 5px;
-    border-radius: 3px;
-}
-
-pre {
-    padding: 10px;
-    overflow-x: auto;
-}
-
-/* Lists */
-ul, ol {
-    margin: 10px 0;
-    padding-left: 20px;
-}
-
-li {
-    margin: 5px 0;
-}
-
-/* Buttons (Optional for interactivity) */
-.button {
-    display: inline-block;
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: #fff;
-    text-align: center;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: #0056b3;
+hr {
+  border-bottom: 1px solid $light-gray;
 }
